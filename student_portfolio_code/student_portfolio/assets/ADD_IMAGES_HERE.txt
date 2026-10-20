@@ -1,1 +1,0 @@
-Place your profile photo and actual project screenshots in this folder. Update index.html to reference them.
