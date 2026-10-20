@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal portfolio of an Information Technology student showcasing skills, education, and projects.">
+  <title>Allere | IT Student Portfolio</title>
+  <script>
+    /* 'js' lets the CSS know scripts are available; the timeout is a safety net
+       so the page can never get stuck waiting for the boot screen */
+    document.documentElement.classList.add('js');
+    setTimeout(function () { document.documentElement.classList.add('ready'); }, 4200);
+  </script>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Boot screen (terminal style). Removed automatically by script.js -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader-box">
+      <div class="preloader-logo">KAIRA<span>ALLERE</span></div>
+      <p class="preloader-line">&gt; initializing portfolio... <b>OK</b></p>
+      <p class="preloader-line">&gt; loading projects &amp; skills... <b>OK</b></p>
+      <p class="preloader-line">&gt; compiling creativity... <b>OK</b></p>
+      <div class="preloader-bar"><span></span></div>
+      <p class="preloader-pct">0%</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="logo" href="#home">KAIRA<span>ALLERE</span></a>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a class="nav-link active" href="#home">Home</a></li>
+        <li><a class="nav-link" href="#about">About</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#experience">Experience</a></li>
+        <li><a class="nav-link" href="#projects">Projects</a></li>
+        <li><a class="nav-link" href="#education">Education</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-glow glow-one"></div>
+      <div class="hero-glow glow-two"></div>
+      <!-- Floating code symbols (decoration) -->
+      <div class="float-symbols" aria-hidden="true">
+        <span>&lt;/&gt;</span><span>{ }</span><span>01</span><span>;</span>
+        <span>#</span><span>( )</span><span>[ ]</span><span>=&gt;</span>
+      </div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot"></span> INFORMATION TECHNOLOGY STUDENT</p>
+          <h1>Hello, I'm <span class="gradient-text">Kaira Allere.</span></h1>
+          <h2>Aspiring Developer <span class="separator">·</span> Lifelong Learner</h2>
+          <p class="hero-description">
+            I enjoy exploring technology, learning how applications are built, and creating practical digital solutions that can help people.
+          </p>
+          <!-- Typing line: edit the words in data-words (comma separated) -->
+          <p class="hero-typed"><span class="typed-prefix">&gt;</span>I build <span class="typed-text" data-words="Websites,Mobile Apps,Games,Graphic Designs">Websites</span><span class="typed-cursor" aria-hidden="true"></span></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore My Projects <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="#contact">Contact Me</a>
+            <!-- Downloads the resume file; it is never displayed on the page -->
+            <a class="button button-secondary" href="assets/Kaira-Allere-Resume.pdf" download="Kaira-Allere-Resume.pdf" target="_blank">Download Resume <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-socials">
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <span class="social-divider"></span>
+            <a href="https://www.linkedin.com/in/kaira-allere-a21b20399/?isSelfProfile=true" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="orbit orbit-large"></div>
+          <div class="orbit orbit-small"></div>
+          <div class="profile-card">
+            <div class="profile-top"><span></span><span></span><span></span><p>profile.id</p></div>
+            <div class="profile-photo">
+              <span class="photo-fallback" aria-hidden="true">KA</span>
+              <!-- Put your photo at assets/kaira.jpg (portrait, ideally 600x720) -->
+              <img src="assets/kaira.jpg" alt="Portrait of Kaira Allere" onerror="this.remove()">
+            </div>
+          </div>
+          <div class="floating-tag tag-code"><span>&lt;/&gt;</span> Code</div>
+          <div class="floating-tag tag-design"><span>✳</span> Design</div>
+          <div class="floating-tag tag-build"><span>⚙</span> Build</div>
+        </div>
+      </div>
+      <a class="scroll-cue" href="#about"><span></span> Scroll to explore</a>
+    </section>
+
+    <!-- TECH TICKER + STATS: scrolling list of tools from your skills and projects -->
+    <section class="tech-strip" aria-label="Technologies I work with">
+      <div class="marquee">
+        <div class="marquee-track">
+          <div class="marquee-group">
+            <span class="tech-chip">Flutter</span><span class="tech-chip">Dart</span><span class="tech-chip">Python</span>
+            <span class="tech-chip">Django</span><span class="tech-chip">PHP</span><span class="tech-chip">MySQL</span>
+            <span class="tech-chip">Firebase</span><span class="tech-chip">HTML</span><span class="tech-chip">CSS</span>
+            <span class="tech-chip">JavaScript</span><span class="tech-chip">C++</span><span class="tech-chip">Java</span>
+            <span class="tech-chip">Figma</span><span class="tech-chip">Canva</span>
+          </div>
+          <!-- identical copy so the loop is seamless -->
+          <div class="marquee-group" aria-hidden="true">
+            <span class="tech-chip">Flutter</span><span class="tech-chip">Dart</span><span class="tech-chip">Python</span>
+            <span class="tech-chip">Django</span><span class="tech-chip">PHP</span><span class="tech-chip">MySQL</span>
+            <span class="tech-chip">Firebase</span><span class="tech-chip">HTML</span><span class="tech-chip">CSS</span>
+            <span class="tech-chip">JavaScript</span><span class="tech-chip">C++</span><span class="tech-chip">Java</span>
+            <span class="tech-chip">Figma</span><span class="tech-chip">Canva</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="stats">
+          <div class="stat"><span class="stat-num gradient-text" data-count="5">5</span><span class="stat-label">Featured Projects</span></div>
+          <div class="stat"><span class="stat-num gradient-text" data-count="14" data-suffix="+">14+</span><span class="stat-label">Tools &amp; Technologies</span></div>
+          <div class="stat"><span class="stat-num gradient-text" data-count="3" data-suffix="+">3+</span><span class="stat-label">Years of IT Studies</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT: the heading sits in the left column (above the IT box),
+         so "Learning today. Building for tomorrow." starts at the top of the right column. -->
+    <section class="section" id="about">
+      <div class="section-deco" aria-hidden="true"><span>&lt;/&gt;</span><span>{ }</span><span>01</span><span>//</span><span>[ ]</span><span>=&gt;</span></div>
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-side">
+            <div class="section-heading section-heading-side">
+              <p class="eyebrow">GET TO KNOW ME</p>
+              <h2>About <span class="gradient-text">Me</span></h2>
+              <p>A little about my journey, interests, and goals.</p>
+            </div>
+
+            <div class="about-mark" aria-hidden="true">
+              <div class="mark-ring"><span>IT</span></div>
+              <span class="mark-caption">Curiosity fuels growth.</span>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <h3>Learning today. Building for tomorrow.</h3>
+            <p class="summary-text">
+              Motivated and adaptable Information Technology student eager to apply my technical and creative skills in a professional environment. Possess a strong work ethic, a willingness to learn, and the ability to collaborate effectively with a team.
+            </p>
+            <p>
+              I am an Information Technology student who enjoys exploring technology and learning how software applications are designed and developed. Through academic activities and projects, I continue to build my knowledge of programming, database management, and user interface design.
+            </p>
+            <p>
+              I value teamwork, continuous learning, and creating practical solutions to everyday problems. My goal is to keep improving my skills and grow into an IT professional who can contribute to meaningful technology projects.
+            </p>
+
+            <div class="about-facts">
+              <div class="fact"><span class="fact-icon">⌘</span><div><strong>Technology</strong><small>Always curious</small></div></div>
+              <div class="fact"><span class="fact-icon">✦</span><div><strong>Creativity</strong><small>Ideas into projects</small></div></div>
+              <div class="fact"><span class="fact-icon">↗</span><div><strong>Growth</strong><small>Learning step by step</small></div></div>
+            </div>
+
+            <div class="personal-data">
+              <h4>Personal Data</h4>
+              <dl class="data-grid">
+                <div><dt>Birthdate</dt><dd>April 16, 2004</dd></div>
+                <div><dt>Sex</dt><dd>Female</dd></div>
+                <div><dt>Civil Status</dt><dd>Single</dd></div>
+                <div><dt>Height</dt><dd>4'11"</dd></div>
+                <div><dt>Weight</dt><dd>40 kg</dd></div>
+                <div><dt>Nationality</dt><dd>Filipino</dd></div>
+                <div><dt>Religion</dt><dd>Roman Catholic</dd></div>
+                <div><dt>Language Spoken</dt><dd>Tagalog, English</dd></div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="skills">
+      <div class="section-deco" aria-hidden="true"><span>{ }</span><span>&lt;/&gt;</span><span>10</span><span>;</span><span>#</span><span>( )</span></div>
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHAT I'M LEARNING</p>
+          <h2>My <span class="gradient-text">Skills</span></h2>
+          <p>Tools and abilities I use and continue to develop.</p>
+        </div>
+
+        <div class="skills-layout">
+          <div class="skill-group">
+            <div class="skill-group-title"><span class="group-icon">{ }</span><h3>Programming</h3></div>
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-symbol">C</span><span>C</span></div>
+              <div class="skill-item"><span class="skill-symbol">C++</span><span>C++</span></div>
+              <div class="skill-item"><span class="skill-symbol">Ja</span><span>Java</span></div>
+              <div class="skill-item"><span class="skill-symbol">Py</span><span>Python</span></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title"><span class="group-icon">▤</span><h3>Database</h3></div>
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-symbol">SQL</span><span>MySQL</span></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title"><span class="group-icon">✳</span><h3>Design & Productivity</h3></div>
+            <div class="skill-list">
+              <div class="skill-item"><span class="skill-symbol">Fi</span><span>Figma</span></div>
+              <div class="skill-item"><span class="skill-symbol">Ca</span><span>Canva</span></div>
+
+              <div class="skill-item"><span class="skill-symbol">Ac</span><span>Access</span></div>
+              <div class="skill-item"><span class="skill-symbol">Cl</span><span>Computer Literacy</span></div>
+              <div class="skill-item"><span class="skill-symbol">Wd</span><span>Web Design</span></div>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group-title"><span class="group-icon">✧</span><h3>Professional Skills</h3></div>
+            <div class="soft-skills">
+              <span>Team Collaboration</span>
+              <span>Time Management</span>
+              <span>Critical Thinking</span>
+              <span>Problem-Solving</span>
+              <span>Teamwork and Cooperation</span>
+              <span>Adaptability and Flexibility</span>
+              <span>Task-oriented</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-deco" aria-hidden="true"><span>=&gt;</span><span>&lt;/&gt;</span><span>01</span><span>{ }</span><span>//</span><span>[ ]</span></div>
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">WHERE I'VE WORKED</p>
+          <h2>My <span class="gradient-text">Experience</span></h2>
+          <p>Hands-on design and multimedia work.</p>
+        </div>
+
+        <div class="experience-card">
+          <!-- Foundation logo (replaces the old square icon).
+               Save the logo as assets/edm-logo.png (or change the file name below). -->
+          <div class="experience-logo">
+            <img src="assets/edm.png" alt="Enfants Du Mekong Foundation logo" onerror="this.style.display='none'">
+          </div>
+
+          <span class="education-label">DESIGN &amp; MULTIMEDIA</span>
+
+          <p class="experience-org">Enfants Du Mekong Foundation Philippines, Inc.</p>
+          <p class="experience-date">2025 – 2026</p>
+          <div class="experience-tags">
+            <span>Technical Team</span>
+            <span>Backdrop Design</span>
+            <span>Tarpaulin</span>
+            <span>Presentation Design (PowerPoint)</span>
+            <span>Publicity Materials (Pubmats)</span>
+            <span>Certificates</span>
+            <span>Poster Design and Layout</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-deco" aria-hidden="true"><span>&lt;/&gt;</span><span>;</span><span>{ }</span><span>11</span><span>#</span><span>=&gt;</span></div>
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">SELECTED WORK</p>
+          <h2>Featured <span class="gradient-text">Projects</span></h2>
+          <p>Academic projects where I explore ideas and practice building digital solutions.</p>
+        </div>
+
+        <!-- SWIPEABLE PROJECTS: to add a project, copy one <article class="project-card"> block
+             below and paste it after the last one. The carousel updates by itself. -->
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-art art-lectra">
+              <img src="assets/lectraAi.png" alt="LectraAI project preview" loading="lazy">
+              <span class="project-number">01</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-category">AI • EDUCATION</span><span class="status status-ongoing">Ongoing</span></div>
+              <h3><a class="project-link" href="https://your-lectraai-link.com" target="_blank" rel="noreferrer" aria-label="Open the LectraAI live system">LectraAI</a></h3>
+              <p class="project-full-title">AI-Powered Module-to-Presentation and Voice Lecture Generator</p>
+              <p>An AI-powered mobile application concept designed to help transform educational modules into presentation materials and generate AI voice lectures for learning and review.</p>
+              <div class="project-tags"><span>Mobile App</span><span>AI</span><span>Text-to-Speech</span></div>
+              <button class="text-link project-details" data-project="lectra" aria-expanded="false">Project details <span>↗</span></button>
+              <div class="project-extra" id="details-lectra" hidden>
+                <p><strong>Purpose:</strong> Make the preparation of learning materials more convenient and give students additional ways to review educational content.</p>
+                <p><strong>My contribution:</strong> Frontend Developer and Graphics Designer.</p>
+                <p><strong>Technologies:</strong> Flutter (Dart), Python, MySQL / Firebase.</p>
+                <p><strong>Status:</strong> Ongoing.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art art-rental">
+              <img src="assets/car.png" alt="RentalPro project preview" loading="lazy">
+              <span class="project-number">02</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-category">WEB • BOOKING</span><span class="status status-completed">Completed</span></div>
+              <h3><a class="project-link" href="https://your-carrent-link.com" target="_blank" rel="noreferrer" aria-label="Open the CarRent live system">CarRent</a></h3>
+              <p class="project-full-title">Car Rental Booking System</p>
+              <p>A car rental booking system concept designed to help users explore available vehicles and organize rental bookings through a digital platform.</p>
+              <div class="project-tags"><span>Web Development</span><span>Booking System</span><span>Database</span></div>
+              <button class="text-link project-details" data-project="rental" aria-expanded="false">Project details <span>↗</span></button>
+              <div class="project-extra" id="details-rental" hidden>
+                <p><strong>Purpose:</strong> Organize vehicle information and rental booking details.</p>
+                <p><strong>My contribution:</strong> Frontend Developer and Graphics Designer.</p>
+                <p><strong>Technologies:</strong> Python, Django Framework.</p>
+                <p><strong>Status:</strong> Completed.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art art-vendor">
+              <img src="assets/vendor.png" alt="Street Vendor Online Permit Registration System preview" loading="lazy">
+              <span class="project-number">03</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-category">WEB • REGISTRATION</span><span class="status status-prototype">Prototype</span></div>
+              <h3><a class="project-link" href="https://your-vendor-link.com" target="_blank" rel="noreferrer" aria-label="Open the Street Vendor Online Permit Registration System live system">Street Vendor Online Permit Registration System</a></h3>
+              <p>A web-based project designed to make street vendor permit applications more convenient and organized through online registration and structured application information.</p>
+              <div class="project-tags"><span>Web Development</span><span>Online Registration</span><span>Records</span></div>
+              <button class="text-link project-details" data-project="vendor" aria-expanded="false">Project details <span>↗</span></button>
+              <div class="project-extra" id="details-vendor" hidden>
+                <p><strong>Purpose:</strong> Provide an online interface for permit registration and organize vendor application information.</p>
+                <p><strong>My contribution:</strong> Frontend Developer and Graphics Designer.</p>
+                <p><strong>Technologies:</strong> PHP, MySQL.</p>
+                <p><strong>Status:</strong> Prototype.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art art-monster">
+              <img src="assets/monsterhunt.png" alt="Monster Hunt: Love Beyond the Crown world design preview" loading="lazy">
+              <span class="project-number">04</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-category">GAME • DEV</span><span class="status status-completed">Completed</span></div>
+              <h3><a class="project-link" href="https://your-monsterhunt-link.com" target="_blank" rel="noreferrer" aria-label="Open the Monster Hunt game">Monster Hunt</a></h3>
+              <p class="project-full-title">Monster Hunt: Love Beyond the Crown</p>
+              <p>A fantasy trivia adventure game set in the kingdom of Vaskarenthold. Players travel through four regions (Forest, Wetland, Desert, and Mountains), facing a guardian in each one by answering knowledge-based challenges.</p>
+              <div class="project-tags"><span>Game Development</span><span>Trivia</span><span>World Design</span></div>
+              <button class="text-link project-details" data-project="monster" aria-expanded="false">Project details <span>↗</span></button>
+              <div class="project-extra" id="details-monster" hidden>
+                <p><strong>Purpose:</strong> Make learning engaging by turning trivia into a story-driven game, with each region having its own guardian, trivia theme, color palette, and background music mood.</p>
+                <p><strong>My contribution:</strong> Frontend Developer and Graphics Designer.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript, and a JavaScript game engine.</p>
+                <p><strong>Status:</strong> Completed.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-art art-bst">
+              <img src="assets/bst.png" alt="BST Buy, Sell, Trade community marketplace preview" loading="lazy">
+              <span class="project-number">05</span>
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><span class="project-category">WEB • MARKETPLACE</span><span class="status status-prototype">Prototype</span></div>
+              <h3><a class="project-link" href="https://your-bst-link.com" target="_blank" rel="noreferrer" aria-label="Open the BST live system">BST</a></h3>
+              <p class="project-full-title">Buy, Sell, Trade Community Exchange</p>
+              <p>A community marketplace concept where people can list, search, and trade items locally. Users can chat and negotiate directly, then arrange a safe exchange with a verified-profile rating system.</p>
+              <div class="project-tags"><span>Web Design</span><span>Marketplace</span><span>UI / UX</span></div>
+              <button class="text-link project-details" data-project="bst" aria-expanded="false">Project details <span>↗</span></button>
+              <div class="project-extra" id="details-bst" hidden>
+                <p><strong>Purpose:</strong> Give communities one easy place to buy, sell, and trade everyday items locally, easily, and securely.</p>
+                <p><strong>My contribution:</strong> Frontend Developer and Graphics Designer.</p>
+                <p><strong>Technologies:</strong> HTML, CSS, JavaScript.</p>
+                <p><strong>Status:</strong> Prototype.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="education">
+      <div class="section-deco" aria-hidden="true"><span>[ ]</span><span>&lt;/&gt;</span><span>01</span><span>{ }</span><span>;</span><span>//</span></div>
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">MY LEARNING JOURNEY</p>
+          <h2>Education &amp; <span class="gradient-text">Growth</span></h2>
+          <p>The foundation of my journey in technology.</p>
+        </div>
+
+        <!-- All education cards share one list so they have identical width and size -->
+        <div class="education-list">
+
+          <!-- Current Education -->
+          <article class="education-card">
+            <div class="education-icon">✦</div>
+            <div class="education-details">
+              <span class="education-label">CURRENT EDUCATION</span>
+              <h3>Bachelor of Science in Information Technology</h3>
+              <p class="school-name">Cebu Eastern College, Incorporated</p>
+              <p class="education-placeholder">Leon Kilat Street, Cebu City, 6000 Philippines</p>
+              <p class="education-placeholder">Year level: Update with your current year level</p>
+              <p class="education-placeholder">Academic year: 2023 – Present</p>
+            </div>
+            <div class="education-date">Student</div>
+          </article>
+
+          <!-- Senior High School -->
+          <article class="education-card">
+            <div class="education-icon">✦</div>
+            <div class="education-details">
+              <span class="education-label">SECONDARY EDUCATION</span>
+              <h3>Emelia Maningo Elca Academy</h3>
+              <p class="school-name">Science, Technology, Engineering, and Mathematics (STEM)</p>
+              <p class="education-placeholder">Sitio Kamalig, Dumlog, Talisay, 6045 Cebu</p>
+            </div>
+            <div class="education-date">2021 – 2023</div>
+          </article>
+
+          <!-- Junior High School -->
+          <article class="education-card">
+            <div class="education-icon">✦</div>
+            <div class="education-details">
+              <span class="education-label">SECONDARY EDUCATION</span>
+              <h3>Inayawan National High School</h3>
+              <p class="school-name">Dressmaking Majorship</p>
+              <p class="education-placeholder">171 F. Jaca St, Inayawan, Cebu City, 6000 Cebu</p>
+            </div>
+            <div class="education-date">2017 – 2021</div>
+          </article>
+
+          <!-- Elementary School -->
+          <article class="education-card">
+            <div class="education-icon">✦</div>
+            <div class="education-details">
+              <span class="education-label">PRIMARY EDUCATION</span>
+              <h3>Zapatera Elementary School</h3>
+              <p class="education-placeholder">8W32+CVC, Sikatuna St, Cebu City, 6000 Cebu</p>
+            </div>
+            <div class="education-date">2011 – 2017</div>
+          </article>
+
+        </div>
+
+        <!-- Learning Note -->
+        <div class="learning-note">
+          <span>✧</span>
+          <p>
+            <strong>Always learning.</strong>
+            I believe every project is an opportunity to improve,
+            solve problems, and learn something new.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="section-deco" aria-hidden="true"><span>&lt;/&gt;</span><span>=&gt;</span><span>{ }</span><span>01</span><span>#</span><span>;</span></div>
+      <div class="container contact-card">
+        <div class="contact-copy">
+          <p class="eyebrow">LET'S CONNECT</p>
+          <h2>Want to work together?<br><span class="gradient-text">Let's talk.</span></h2>
+          <p>I'm always open to learning, collaborating on student projects, and connecting with people who share an interest in technology.</p>
+        </div>
+        <div class="contact-actions">
+          <div class="contact-buttons">
+            <a class="button button-primary" href="mailto:kallere2004@gmail.com">Send Me an Email <span aria-hidden="true">↗</span></a>
+            <a class="button button-secondary" href="assets/Kaira-Allere-Resume.pdf" download="Kaira-Allere-Resume.pdf" target="_blank">Download Resume <span aria-hidden="true">↓</span></a>
+          </div>
+
+          <ul class="contact-details">
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              </span>
+              <a href="mailto:kallere2004@gmail.com">kallere2004@gmail.com</a>
+              <button class="copy-btn" type="button" data-copy="kallere2004@gmail.com" aria-label="Copy email address">Copy</button>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              </span>
+              <a href="tel:+639655066155">0965 506 6155</a>
+              <button class="copy-btn" type="button" data-copy="09655066155" aria-label="Copy phone number">Copy</button>
+            </li>
+            <li>
+              <span class="contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </span>
+              <span>Tierra Dulce, White Road, Brgy. Inayawan, Cebu City, Philippines</span>
+            </li>
+          </ul>
+
+          <div class="contact-socials">
+            <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a href="https://www.linkedin.com/in/kaira-allere-a21b20399/?isSelfProfile=true" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#home">KAIRA<span>ALLERE</span></a>
+      <p>Designed with curiosity and a passion for learning.</p>
+      <p>© <span id="year"></span> Kaira D. Allere. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
